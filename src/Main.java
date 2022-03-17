@@ -10,11 +10,11 @@ public class Main {
         Message message = new Message("I'm going to be late for work, I'm sorry!");
         Iphone iphone = new Iphone(13,"Pro",memory,battery,display,cpu,1350,true);
         Phone phone = new Phone();
-        System.out.println(iphone.iphoneInfo());
-        System.out.println(memory.memoryInfo());
-        System.out.println(battery.batteryInfo());
-        System.out.println(display.displayInfo());
-        System.out.println(cpu.cpuInfo());
+        System.out.println(iphone.toString());
+        System.out.println(memory.toString());
+        System.out.println(battery.toString());
+        System.out.println(display.toString());
+        System.out.println(cpu.toString());
         System.out.println("");
         System.out.println("Sending a message:");
         System.out.println(iphone.sendMessage(message,firstClient,secondClient));
@@ -24,8 +24,6 @@ public class Main {
         firstClient.setFirstName("Max ");
         secondClient.setFirstName("Oleg ");
         System.out.println(iphone.makeCall(firstClient,secondClient));
-        //Устанавливаем соединение домашашнего телефона со спутником
-        System.out.println(phone.satelliteConnection());
         //Делаем звонок с домашнего телефона
         System.out.println(phone.makeCall(firstClient,secondClient));
         //Устанавливаем соединение Iphone  со спутник

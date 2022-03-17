@@ -25,8 +25,11 @@ public class Battery {
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
-    public String batteryInfo(){
-        return ("\n"+"Battery:"+"\n"+"Manufacture - "+ getManufacture()+"\n"+ "Capacity - "+ getCapacity() );
 
+    @Override
+    public String toString() {
+        return ("\n"+"Battery:"+"\n"+"Manufacture - "+ getManufacture()+"\n"+ "Capacity - "+ getCapacity() );
     }
+
+
 }

@@ -30,9 +30,11 @@ public class Memory {
         this.capacity = capacity;
     }
 
-
-    public String memoryInfo(){
-       return("\n"+ "Memory: "+"\n"+"Manufacture - "+ getManufacture()+"\n"+ "Capacity - "+ getCapacity()+" Gb");
+    @Override
+    public String toString() {
+        return("\n"+ "Memory: "+"\n"+"Manufacture - "+ getManufacture()+"\n"+ "Capacity - "+ getCapacity()+" Gb");
 
     }
+
+
 }

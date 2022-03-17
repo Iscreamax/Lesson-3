@@ -26,8 +26,12 @@ public class Cpu {
     public void setFrequency(double frequency) {
         this.frequency = frequency;
     }
-    public String cpuInfo(){
-        return ("\n"+"Cpu:"+"\n"+"Manufacture - "+ getManufacture()+"\n"+"Frequency -  "+ getFrequency());
 
+    @Override
+    public String toString() {
+        return ("\n"+"Cpu:"+"\n"+"Manufacture - "+ getManufacture()+"\n"+"Frequency -  "+ getFrequency());
     }
+
+
+
 }

@@ -6,11 +6,14 @@ public class Iphone extends MobilePhone {
         this.waterProof = waterProof;
     }
 
-    public  String iphoneInfo(){
+    @Override
+    public String toString() {
         return("Iphone "+ getModel() + "/" + getVersion()+"/"+getMemory().getCapacity()  + "Gb/"
                 + getBattery().getCapacity()+ "mah/"+getDisplay().getInch()+"inh/"+getCpu().getFrequency()+
                 "Ggz/price -"+getPrice() + "$"+" WaterProof - "+ waterProof);
     }
+
+
 
 
 

@@ -36,8 +36,11 @@ public class Display {
     public void setInch(double inch) {
         this.inch = inch;
     }
-    public String displayInfo(){
-        return ("\n"+"Display:"+"\n"+"Manufacture - "+ getManufacture()+"\n"+"Types - "+ getTypes()+"\n"+"Inch - "+ getInch() );
 
+    @Override
+    public String toString() {
+        return ("\n"+"Display:"+"\n"+"Manufacture - "+ getManufacture()+"\n"+"Types - "+ getTypes()+"\n"+"Inch - "+ getInch() );
     }
+
+
 }

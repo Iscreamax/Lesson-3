@@ -1,4 +1,4 @@
-public  class Phone extends TelephoneExchange {
+public  class Phone  {
     public String alarmCall(){
     return ("Hello this is 911");
 }

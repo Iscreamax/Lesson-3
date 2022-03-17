@@ -1,4 +1,4 @@
-public abstract class MobilePhone extends Phone {
+public abstract class MobilePhone extends WirelessPhone {
     private int model;
     private String version;
     private int price;
