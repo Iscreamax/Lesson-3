@@ -19,23 +19,23 @@ public class Iphone extends MobilePhone {
 
 
     @Override
-    public String internetConnection() {
-        return ("5G works here");
+    public void internetConnection() {
+        System.out.println("5G works here");;
     }
 
 
     @Override
-    public String makePhoto() {
-        return ("Took a high-resolution photo .");
+    public void makePhoto() {
+        System.out.println("Took a high-resolution photo .");
     }
 
     @Override
-    public String makeVideo() {
-        return ("Shot a video in 4K");
+    public void makeVideo() {
+        System.out.println("Shot a video in 4K");
     }
 
     @Override
-    public String installingApplications() {
-        return ("Install application via App store");
+    public void installingApplications() {
+        System.out.println("Install application via App store");
     }
 }

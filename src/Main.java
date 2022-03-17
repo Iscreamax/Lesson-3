@@ -9,7 +9,6 @@ public class Main {
         Client secondClient= new Client("Valet ","Kozirny ","Albertovich");
         Message message = new Message("I'm going to be late for work, I'm sorry!");
         Iphone iphone = new Iphone(13,"Pro",memory,battery,display,cpu,1350,true);
-        Phone phone = new Phone();
         System.out.println(iphone.toString());
         System.out.println(memory.toString());
         System.out.println(battery.toString());
@@ -17,27 +16,25 @@ public class Main {
         System.out.println(cpu.toString());
         System.out.println("");
         System.out.println("Sending a message:");
-        System.out.println(iphone.sendMessage(message,firstClient,secondClient));
+        iphone.sendMessage(message,firstClient,secondClient);
         System.out.println("Making a call:");
-        System.out.println(iphone.makeCall(firstClient,secondClient));
+        iphone.makeCall(firstClient,secondClient);
         System.out.println("We change names and make a call:");
         firstClient.setFirstName("Max ");
         secondClient.setFirstName("Oleg ");
-        System.out.println(iphone.makeCall(firstClient,secondClient));
-        //Делаем звонок с домашнего телефона
-        System.out.println(phone.makeCall(firstClient,secondClient));
+        iphone.makeCall(firstClient,secondClient);
         //Устанавливаем соединение Iphone  со спутник
-        System.out.println(iphone.satelliteConnection());
+        iphone.satelliteConnection();
         //Устанавливаем интернет соединение Iphone
-        System.out.println(iphone.internetConnection());
+        iphone.internetConnection();
         //Делаем фото на Iphone
-        System.out.println(iphone.makePhoto());
+        iphone.makePhoto();
         //Снимаем видео на Iphone
-        System.out.println(iphone.makeVideo());
+        iphone.makeVideo();
         //Звонок с службу 911 с Iphone
-        System.out.println(iphone.alarmCall());
+        iphone.alarmCall();
         //Установка приложение в App store
-        System.out.println(iphone.installingApplications());
+        iphone.installingApplications();
 
     }
 }

@@ -1,7 +1,6 @@
 public abstract class MobilePhone extends WirelessPhone {
-    private int model;
-    private String version;
-    private int price;
+
+
     private Battery battery;
     private Memory memory;
     private Display display;
@@ -9,38 +8,14 @@ public abstract class MobilePhone extends WirelessPhone {
 
 
     public MobilePhone(int model, String version, Memory memory, Battery battery, Display display, Cpu cpu, int price) {
-        this.model = model;
-        this.version = version;
-        this.price = price;
+        super(model, version, price);
         this.memory= memory;
         this.battery=battery;
         this.display=display;
         this.cpu=cpu;
     }
 
-    public int getModel() {
-        return model;
-    }
 
-    public void setModel(int model) {
-        this.model = model;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
 
     public Battery getBattery() {
         return battery;
@@ -75,17 +50,17 @@ public abstract class MobilePhone extends WirelessPhone {
     }
 
     @Override
-    public String makeCall(Client firstClient, Client secondClient) {
-        return (firstClient.getFirstName()+" called " + secondClient.getFirstName()+" by 5G.");
+    public void makeCall(Client firstClient, Client secondClient) {
+        System.out.println(firstClient.getFirstName()+" called " + secondClient.getFirstName()+" by 5G.");
     }
 
-    public  String sendMessage(Message message, Client firstClient, Client secondClient){
-        return ("Dear "+ secondClient.getFirstName()+secondClient.getSurname()+secondClient.getPatronymic()+", "+
+    public  void sendMessage(Message message, Client firstClient, Client secondClient){
+        System.out.println("Dear "+ secondClient.getFirstName()+secondClient.getSurname()+secondClient.getPatronymic()+", "+
                 "It's "+ firstClient.getFirstName()+firstClient.getSurname()+firstClient.getPatronymic()+", "+message.getLetterField());
     };
-    public abstract String internetConnection();
-    public abstract String makePhoto();
-    public abstract String makeVideo();
-    public abstract String installingApplications();
+    public abstract void internetConnection();
+    public abstract void makePhoto();
+    public abstract void makeVideo();
+    public abstract void installingApplications();
 
 }
